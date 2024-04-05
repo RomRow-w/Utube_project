@@ -1,9 +1,10 @@
 import React from 'react';
+import MainHeader from './components/MainHeader';
 
 function App() {
   return (
-    <div className="bg-red-900">
-      Rabotaet
+    <div className="flex flex-col max-h-screen">
+      <MainHeader/>
     </div>
   );
 }
