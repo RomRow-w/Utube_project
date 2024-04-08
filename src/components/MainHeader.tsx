@@ -18,8 +18,8 @@ export default function MainHeader() {
         <Button variant='ghost' size='icon'>
           <Menu />
         </Button>
-        <div className='flex items-center'>
-          <img src={logo} alt='' className='h-5'/>
+        <div className='flex items-center select-none'>
+          <img src={logo} alt='' className='h-8 w-8'/>
           <div className='font-medium pl-1'>Юtube</div>
         </div>
       </div>  
