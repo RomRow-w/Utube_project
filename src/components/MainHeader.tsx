@@ -18,9 +18,9 @@ export default function MainHeader() {
         <Button variant='ghost' size='icon'>
           <Menu />
         </Button>
-        <div className='flex items-center select-none'>
+        <div className=' items-center select-none hidden sm:flex'>
           <img src={logo} alt='' className='h-8 w-8'/>
-          <div className='font-medium pl-1'>Юtube</div>
+          <div className='font-medium pl-1 text-lg'>Юtube</div>
         </div>
       </div>  
       <form className={
@@ -42,7 +42,7 @@ export default function MainHeader() {
         <div className='flex flex-grow max-w-[600px]'>
           <input 
             type='search' 
-            placeholder='Search'
+            placeholder='Введите запрос'
             className='rounded-l-full border border-secondary-border 
               shadow-inner shadow-secondary py-1 px-4 text-lg w-full
               focus:border-blue-500 outline-none'
