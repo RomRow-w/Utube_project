@@ -3,8 +3,13 @@ import { useState } from 'react';
 import logo from '../assets/imgs/mainLogo.svg';
 import Button from './UI/Button';
 
+type headerProps = {
+  sideVisible: boolean,
+  setSideVisible: React.Dispatch<React.SetStateAction<boolean>>,
+}
 
-export default function MainHeader() {
+
+export default function MainHeader({sideVisible,setSideVisible}: headerProps) {
   const [showFullWidthSearch, setShowFullWidthSearch] = useState<boolean>(false);
 
   return (
@@ -15,7 +20,7 @@ export default function MainHeader() {
           ${showFullWidthSearch ? "hidden" : "flex" }`
         }
       >
-        <Button variant='ghost' size='icon'>
+        <Button variant='ghost' size='icon' onClick={() => setSideVisible(!sideVisible)}>
           <Menu />
         </Button>
         <div className=' items-center select-none hidden sm:flex'>
