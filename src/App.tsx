@@ -10,7 +10,7 @@ import filterVideos from "./utils/filterVideos";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState<string>(categories[0]);
-  const [searchString, setSeacrhString] = useState<string>('');
+  const [searchString, setSeacrhString] = useState<string>("");
   const [modalUrl, setModalUrl] = useState<string>("");
   const [sidebarVisibility, setSidebarVisibility] = useState<boolean>(true);
   const filteredVideos = filterVideos(videos,selectedCategory,searchString);

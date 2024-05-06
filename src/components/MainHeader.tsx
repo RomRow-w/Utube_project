@@ -1,7 +1,8 @@
-import { Menu, Upload, User, Bell, Mic, Search, ArrowLeft } from 'lucide-react';
-import { useState } from 'react';
-import logo from '../assets/imgs/mainLogo.svg';
-import Button from './UI/Button';
+import { Menu, Upload, User, Bell, Mic, Search, ArrowLeft } from "lucide-react";
+import { useState } from "react";
+import logo from "../assets/imgs/mainLogo.svg";
+import Button from "./UI/Button";
+import placeholderAlert from "../utils/placeholderAlert"
 
 type headerProps = {
   sideVisible: boolean,
@@ -15,19 +16,19 @@ export default function MainHeader({sideVisible, setSideVisible, searchString, s
   const [showFullWidthSearch, setShowFullWidthSearch] = useState<boolean>(false);
 
   return (
-    <div className='flex justify-between gap-10 lg:gap-20 pt-2 mb-6 mx-4'>
+    <div className="flex justify-between gap-10 lg:gap-20 pt-2 mb-6 mx-4">
       <div 
         className={
           `gap-4 items-center flex-shrink-0 
           ${showFullWidthSearch ? "hidden" : "flex" }`
         }
       >
-        <Button variant='ghost' size='icon' onClick={() => setSideVisible(!sideVisible)}>
+        <Button variant="ghost" size="icon" onClick={() => setSideVisible(!sideVisible)}>
           <Menu />
         </Button>
-        <div className=' items-center select-none hidden sm:flex'>
-          <img src={logo} alt='' className='h-8 w-8'/>
-          <div className='font-medium pl-1 text-lg'>Юtube</div>
+        <div className=" items-center select-none hidden sm:flex">
+          <img src={logo} alt="" className="h-8 w-8"/>
+          <div className="font-medium pl-1 text-lg">Юtube</div>
         </div>
       </div>  
       <form className={
@@ -38,47 +39,47 @@ export default function MainHeader({sideVisible, setSideVisible, searchString, s
         {showFullWidthSearch && (
           <Button 
             onClick={() => setShowFullWidthSearch(false)}
-            type='button' 
-            size='icon' 
-            variant='ghost' 
-            className='flex-shrink-0'
+            type="button" 
+            size="icon" 
+            variant="ghost" 
+            className="flex-shrink-0"
           >
             <ArrowLeft />
           </Button>
         )}
-        <div className='flex flex-grow max-w-[600px]'>
+        <div className="flex flex-grow max-w-[600px]">
           <input 
-            type='search' 
-            placeholder='Введите запрос'
-            className='rounded-l-full border border-secondary-border 
+            type="search" 
+            placeholder="Введите запрос"
+            className="rounded-l-full border border-secondary-border 
               shadow-inner shadow-secondary py-1 px-4 text-lg w-full
-              focus:border-blue-500 outline-none'
+              focus:border-blue-500 outline-none"
             value={searchString}
             onChange={(i) => setSearchString(i.target.value)}
           />
-          <Button className='py-2 px-4 rounded-r-full border-secondary-border
-           border border-l-0 flex-shrink-0'>
+          <Button className="py-2 px-4 rounded-r-full border-secondary-border
+           border border-l-0 flex-shrink-0">
             <Search />
           </Button>
         </div>
-        <Button type='button' size='icon' className='flex-shrink-0'>
+        <Button type="button" size="icon" className="flex-shrink-0" onClick={() => placeholderAlert()}>
           <Mic />
         </Button>
       </form>
       <div className={`flex-shrink-0 md:gap-2 ${showFullWidthSearch ? "hidden" : "flex" }`}>
-        <Button onClick={() => setShowFullWidthSearch(true)} size='icon' variant='ghost' className='md:hidden'>
+        <Button onClick={() => setShowFullWidthSearch(true)} size="icon" variant="ghost" className="md:hidden">
           <Search />
         </Button>
-        <Button size='icon' variant='ghost' className='md:hidden'>
+        <Button size="icon" variant="ghost" className="md:hidden" onClick={() => placeholderAlert()}>
           <Mic />
         </Button>
-        <Button size='icon' variant='ghost'>
+        <Button size="icon" variant="ghost" onClick={() => placeholderAlert()}>
           <Upload />
         </Button>
-        <Button size='icon' variant='ghost'>
+        <Button size="icon" variant="ghost" onClick={() => placeholderAlert()}>
           <Bell />
         </Button>
-        <Button size='icon' variant='ghost'>
+        <Button size="icon" variant="ghost" onClick={() => placeholderAlert()}>
           <User />
         </Button>
       </div>
