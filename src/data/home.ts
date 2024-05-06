@@ -9,6 +9,24 @@ export const categories = [
   'Юмористические видео',
 ]
 
+export interface IvideoItem {
+  id: string;
+  title: string;
+  channel: {
+      name: string;
+      url: string;
+      profileUrl: string;
+  };
+  tags: string[];
+  views: number;
+  duration: number;
+  whenPosted: string;
+  thumbnailUrl: string;
+  videoUrl: string;
+}
+
+
+
 export const videos = [
   {
     id: '1',
@@ -19,7 +37,7 @@ export const videos = [
       profileUrl:
         'https://yt3.googleusercontent.com/ytc/AIdro_lDln3-NOlVwx1Jwe3Pq7hoLqZsXma9QerERh1eDD08Vw=s176-c-k-c0x00ffffff-no-rj',
     },
-    tags: ['Домашние Животные','Веселые Собачки','Юмористические видео'],
+    tags: ['Все', 'Домашние Животные','Веселые Собачки','Юмористические видео'],
     views: 95940, 
     duration: 683,
     whenPosted: '3 года назад',
@@ -36,7 +54,7 @@ export const videos = [
       profileUrl:
         'https://yt3.googleusercontent.com/coJBIm7rugfAkdb9_cw5Lry2NDnfSYDjL5MBu_R2st_YCLsZtDxYu28h2EAJzPfY8qudaF8U=s176-c-k-c0x00ffffff-no-rj',
     },
-    tags: ['Музыка'],
+    tags: ['Все','Музыкальные видео'],
     views: 1524603953,
     duration: 213,
     whenPosted: '14 лет назад',
@@ -53,7 +71,7 @@ export const videos = [
       profileUrl:
         'https://yt3.googleusercontent.com/uDN1-X9iyRY2Eu9KJ9cLZ5Npr1ZyY_11lZGPTtLwiUfqSPDNOfl1P_proU1V14mx8UFFjo6gN_M=s176-c-k-c0x00ffffff-no-rj',
     },
-    tags: ['Домашние Животные,Прикольные кошечки','Юмористические видео'],
+    tags: ['Все','Домашние Животные', 'Прикольные кошечки','Юмористические видео'],
     views: 2881841,
     duration: 659,
     whenPosted: '7 месяцев назад',
@@ -70,7 +88,7 @@ export const videos = [
       profileUrl:
         'https://yt3.googleusercontent.com/ytc/AIdro_mUNOKQGUK_JbpYN_9cZwpIigj1yyoSl5TQ8PONJ82GB0I=s176-c-k-c0x00ffffff-no-rj',
     },
-    tags: ['Музыка'],
+    tags: ['Все', 'Музыкальные видео'],
     views: 3372640,
     duration: 4318,
     whenPosted: '7 лет назад',
@@ -87,7 +105,7 @@ export const videos = [
       profileUrl:
         'https://yt3.googleusercontent.com/-f6wzMuCrLXGXEvCIvmjp-JhpfGy6g4tY0thsYw58oS3MZw0eOBD2rCm4eZtvXdVIWE7VfyNt8Q=s176-c-k-c0x00ffffff-no-rj',
     },
-    tags: ['Домашние Животные','Прикольные кошечки','Веселые Собачки','Юмористические видео'],
+    tags: ['Все', 'Домашние Животные','Прикольные кошечки','Веселые Собачки','Юмористические видео'],
     views: 15135730,
     duration: 3694, 
     whenPosted: '1 год назад',
@@ -104,7 +122,7 @@ export const videos = [
       profileUrl:
         'https://yt3.googleusercontent.com/ytc/AIdro_mmR4f4lEEP5waLHIogjDpYiZFlij3G--toXG7a548Xdw=s176-c-k-c0x00ffffff-no-rj',
     },
-    tags: ['Музыка'],
+    tags: ['Все', 'Музыкальные видео'],
     views: 2328168,
     duration: 2119,
     whenPosted: '4 года назад',
@@ -121,7 +139,7 @@ export const videos = [
       profileUrl:
         'https://yt3.googleusercontent.com/mRwfGe4KRMroTYteeiPaCfWJeMPFUsUmW6PWIxR3dHGqpEhQzL19_J8rnaZ58GA3gyxo99VLPis=s176-c-k-c0x00ffffff-no-rj',
     },
-    tags: ['Спортивные автомобили','Юмористические видео'],
+    tags: ['Все', 'Спортивные автомобили','Юмористические видео'],
     views: 49445,
     duration: 1902,
     whenPosted: '2 месяца назад',
@@ -138,7 +156,7 @@ export const videos = [
       profileUrl:
         'https://yt3.googleusercontent.com/ytc/AIdro_nPB9hRg6EMXjHITnnWQ8UPVyGPHdI5BZM1BKId0YpW5g=s176-c-k-c0x00ffffff-no-rj',
     },
-    tags: ['Спортивные автомобили'],
+    tags: ['Все', 'Спортивные автомобили'],
     views: 116788,
     duration: 696,
     whenPosted: '5 лет назад',
@@ -155,7 +173,7 @@ export const videos = [
       profileUrl:
         'https://yt3.googleusercontent.com/ytc/AIdro_mEMJtsygF5kyhpc1VtHTqyw-cux_DBinfwxzsftthlfQ=s176-c-k-c0x00ffffff-no-rj',
     },
-    tags: ['Юмористические видео'],
+    tags: ['Все', 'Юмористические видео'],
     views: 55056,
     duration: 131,
     whenPosted: '7 лет назад',
@@ -172,7 +190,7 @@ export const videos = [
       profileUrl:
         'https://yt3.googleusercontent.com/FEUaIm2YPzf_IrR7wTSG_4QpGoKi2GuymEytaa3QPU08q_5ozebXLmgznrTNJf12vSpxGnxmhg=s120-c-k-c0x00ffffff-no-rj',
     },
-    tags: ['Прикольные кошечки', 'Веселые Собачки', 'Юмористические видео'],
+    tags: ['Все', 'Прикольные кошечки', 'Веселые Собачки', 'Юмористические видео', 'Домашние Животные'],
     views: 52338,
     duration: 662,
     whenPosted: '4 дня назад',

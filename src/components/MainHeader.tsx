@@ -6,10 +6,12 @@ import Button from './UI/Button';
 type headerProps = {
   sideVisible: boolean,
   setSideVisible: React.Dispatch<React.SetStateAction<boolean>>,
+  searchString: string,
+  setSearchString: React.Dispatch<React.SetStateAction<string>>,
 }
 
 
-export default function MainHeader({sideVisible,setSideVisible}: headerProps) {
+export default function MainHeader({sideVisible, setSideVisible, searchString, setSearchString}: headerProps) {
   const [showFullWidthSearch, setShowFullWidthSearch] = useState<boolean>(false);
 
   return (
@@ -51,6 +53,8 @@ export default function MainHeader({sideVisible,setSideVisible}: headerProps) {
             className='rounded-l-full border border-secondary-border 
               shadow-inner shadow-secondary py-1 px-4 text-lg w-full
               focus:border-blue-500 outline-none'
+            value={searchString}
+            onChange={(i) => setSearchString(i.target.value)}
           />
           <Button className='py-2 px-4 rounded-r-full border-secondary-border
            border border-l-0 flex-shrink-0'>
