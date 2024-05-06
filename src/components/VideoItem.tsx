@@ -13,6 +13,7 @@ type VideoItemProps = {
   tags: string[],
   views: number,
   duration: number,
+  whenPosted: string,
   thumbnailUrl: string,
   videoUrl: string,
   setModalState: React.Dispatch<React.SetStateAction<string>>,
@@ -27,6 +28,7 @@ export default function VideoItem({
   channel,
   views,
   duration,
+  whenPosted,
   thumbnailUrl,
   videoUrl,
   setModalState,
@@ -35,7 +37,7 @@ export default function VideoItem({
   return (
     <div className='flex flex-col gap-2 justify-between'>
       <div onClick={() => setModalState(videoUrl)} className='relative'>
-        <img src={thumbnailUrl} className='block w-full h-full object-cover rounded-xl'/>
+        <img src={thumbnailUrl} alt='' className='block w-full h-full object-cover rounded-xl'/>
         <div className='absolute bottom-1 right-1 bg-secondary-dark 
           text-secondary text-sm px-0.5 rounded'>
           {formatDuration(duration)}
@@ -46,19 +48,19 @@ export default function VideoItem({
       </div>
       <div className='flex gap-2'>
         <a href={`${channel.url}`} target='blank' className='flex-shrink-0'>
-          <img className='w-12 h-12 rounded-full' src={channel.profileUrl}></img>
+          <img className='w-12 h-12 rounded-full' alt='' src={channel.profileUrl}></img>
         </a>
         <div className='flex flex-col'>
-          <a onClick={() => setModalState(videoUrl)} className='font-bold cursor-pointer'>
+          <div onClick={() => setModalState(videoUrl)} className='font-bold cursor-pointer'>
             {title}
-          </a>
+          </div>
           <a href={`${channel.url}`} target='blank' className='text-secondary-text text-sm'>
             {channel.name}
           </a>
         </div>
       </div>
       <div className='text-secondary-text text-sm'> 
-        {viewFormatter.format(views)} Просмотров
+        {viewFormatter.format(views)} Просмотров ● {whenPosted}
       </div>
     </div>
   )
