@@ -5,12 +5,9 @@ export default function filterVideos(
   selectedCategory: string,
   searchString: string
 ): IvideoItem[] {
-
-  return (
-      videos.filter((item) => 
-      item.tags.includes(selectedCategory) 
-      && item.title.toLowerCase().includes(searchString.toLowerCase())
-      )
-  )
-  
+  return videos.filter(
+    (item) =>
+      item.tags.includes(selectedCategory) &&
+      item.title.toLowerCase().includes(searchString.toLowerCase())
+  );
 }

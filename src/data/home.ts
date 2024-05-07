@@ -20,31 +20,31 @@ export interface IvideoItem {
   tags: string[];
   views: number;
   duration: number;
-  whenPosted: string;
+  whenPosted: Date;
   thumbnailUrl: string;
   videoUrl: string;
 }
 
 
 
-export const videos = [
+export const videos = [ 
   {
-    id: "1",
-    title: "Смешные собаки 2021 Попробуй не засмейся! Лучшие приколы про собак",
-    channel: {
-      name: "Синий пес",
-      url: "https://www.youtube.com/@user-ey5qp1qj5d",
-      profileUrl:
-        "https://yt3.googleusercontent.com/ytc/AIdro_lDln3-NOlVwx1Jwe3Pq7hoLqZsXma9QerERh1eDD08Vw=s176-c-k-c0x00ffffff-no-rj",
+      id: "1",
+      title: "🐕 Я тебя не боюсь! 😺 Смешное видео с собаками, кошками и котятами! 😸",
+      channel: {
+        name: "Top Pets",
+        url: "https://www.youtube.com/@TopPetsVideo",
+        profileUrl:
+          "https://yt3.googleusercontent.com/FEUaIm2YPzf_IrR7wTSG_4QpGoKi2GuymEytaa3QPU08q_5ozebXLmgznrTNJf12vSpxGnxmhg=s120-c-k-c0x00ffffff-no-rj",
+      },
+      tags: ["Все", "Прикольные кошечки", "Веселые Собачки", "Юмористические видео", "Домашние Животные"],
+      views: 52338,
+      duration: 662,
+      whenPosted: new Date('2024-05-01'),
+      thumbnailUrl: "https://i.ytimg.com/vi/Ad5y91VMLs0/mqdefault.jpg",
+      videoUrl:
+        "https://www.youtube.com/embed/Ad5y91VMLs0?si=aWqrNz0lJnhCHvnV&autoplay=1",
     },
-    tags: ["Все", "Домашние Животные","Веселые Собачки","Юмористические видео"],
-    views: 95940, 
-    duration: 683,
-    whenPosted: "3 года назад",
-    thumbnailUrl: "https://i.ytimg.com/vi/vwSw184vKd0/mqdefault.jpg",
-    videoUrl:
-      "https://www.youtube.com/embed/vwSw184vKd0?si=C92zRU6bvk4tDvIH&autoplay=1",
-  },
   {
     id: "2",
     title: "Rick Astley - Never Gonna Give You Up (Official Music Video)",
@@ -57,7 +57,7 @@ export const videos = [
     tags: ["Все","Музыкальные видео"],
     views: 1524603953,
     duration: 213,
-    whenPosted: "14 лет назад",
+    whenPosted: new Date('2009-10-25'),
     thumbnailUrl: "https://i3.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
     videoUrl:
       "https://www.youtube.com/embed/dQw4w9WgXcQ?si=RDSCn2t5LayC03if&autoplay=1",
@@ -74,7 +74,7 @@ export const videos = [
     tags: ["Все","Домашние Животные", "Прикольные кошечки","Юмористические видео"],
     views: 2881841,
     duration: 659,
-    whenPosted: "7 месяцев назад",
+    whenPosted: new Date('2023-09-09'),
     thumbnailUrl: "https://i.ytimg.com/vi/RgGqLNm6O68/mqdefault.jpg",
     videoUrl:
       "https://www.youtube.com/embed/RgGqLNm6O68?si=L0ec6urFroJgclvh&autoplay=1",
@@ -91,7 +91,7 @@ export const videos = [
     tags: ["Все", "Музыкальные видео"],
     views: 3372640,
     duration: 4318,
-    whenPosted: "7 лет назад",
+    whenPosted: new Date('2016-11-21'),
     thumbnailUrl: "https://i.ytimg.com/vi/wfxDIyYU9nM/mqdefault.jpg",
     videoUrl:
       "https://www.youtube.com/embed/wfxDIyYU9nM?si=mF4fjaFvzG9IOm-c&autoplay=1",
@@ -108,7 +108,7 @@ export const videos = [
     tags: ["Все", "Домашние Животные","Прикольные кошечки","Веселые Собачки","Юмористические видео"],
     views: 15135730,
     duration: 3694, 
-    whenPosted: "1 год назад",
+    whenPosted: new Date('2022-11-30'),
     thumbnailUrl: "https://i.ytimg.com/vi/f9VbU_pCh8w/mqdefault.jpg",
     videoUrl:
       "https://www.youtube.com/embed/f9VbU_pCh8w?si=1033B36SxiYQJao6&autoplay=1",
@@ -125,7 +125,7 @@ export const videos = [
     tags: ["Все", "Музыкальные видео"],
     views: 2328168,
     duration: 2119,
-    whenPosted: "4 года назад",
+    whenPosted: new Date('2020-01-27'),
     thumbnailUrl: "https://i3.ytimg.com/vi/4GwYrQeQpJk/maxresdefault.jpg",
     videoUrl:
       "https://www.youtube.com/embed/4GwYrQeQpJk?si=_etc3Vd7gNIGtpC-&autoplay=1",
@@ -142,7 +142,7 @@ export const videos = [
     tags: ["Все", "Спортивные автомобили","Юмористические видео"],
     views: 49445,
     duration: 1902,
-    whenPosted: "2 месяца назад",
+    whenPosted: new Date('2024-03-03'),
     thumbnailUrl: "https://i.ytimg.com/vi/HtysPnQvS9o/mqdefault.jpg",
     videoUrl:
       "https://www.youtube.com/embed/HtysPnQvS9o?si=lE9NSg0ar8n-9R9f&autoplay=1",
@@ -159,14 +159,14 @@ export const videos = [
     tags: ["Все", "Спортивные автомобили"],
     views: 116788,
     duration: 696,
-    whenPosted: "5 лет назад",
+    whenPosted: new Date('2018-09-01'),
     thumbnailUrl: "https://i.ytimg.com/vi/2H54GAUyak8/mqdefault.jpg",
     videoUrl:
       "https://www.youtube.com/embed/2H54GAUyak8?si=nY1ExdV_mVdIG7rE&autoplay=1",
   },
   {
     id: "9",
-    title: "ПРИКОЛЫ 2019. НЕРЕАЛЬНАЯ РЖАКА. УГАР",
+    title: "Приколы на рыбалке! Нереальная ржака!",
     channel: {
       name: "Приколы на рыбалке",
       url: "https://www.youtube.com/@user-xx6lg7kn2u",
@@ -176,26 +176,26 @@ export const videos = [
     tags: ["Все", "Юмористические видео"],
     views: 55056,
     duration: 131,
-    whenPosted: "7 лет назад",
+    whenPosted: new Date('2016-07-25'),
     thumbnailUrl: "https://i.ytimg.com/vi/W6INHK9aaoE/mqdefault.jpg",
     videoUrl:
       "https://www.youtube.com/embed/W6INHK9aaoE?si=xMTu1DBzr9_zNcmn&autoplay=1",
   },
   {
     id: "10",
-    title: "🐕 Я тебя не боюсь! 😺 Смешное видео с собаками, кошками и котятами! 😸",
+    title: "Смешные собаки 2021 Попробуй не засмейся! Лучшие приколы про собак",
     channel: {
-      name: "Top Pets",
-      url: "https://www.youtube.com/@TopPetsVideo",
+      name: "Синий пес",
+      url: "https://www.youtube.com/@user-ey5qp1qj5d",
       profileUrl:
-        "https://yt3.googleusercontent.com/FEUaIm2YPzf_IrR7wTSG_4QpGoKi2GuymEytaa3QPU08q_5ozebXLmgznrTNJf12vSpxGnxmhg=s120-c-k-c0x00ffffff-no-rj",
+        "https://yt3.googleusercontent.com/ytc/AIdro_lDln3-NOlVwx1Jwe3Pq7hoLqZsXma9QerERh1eDD08Vw=s176-c-k-c0x00ffffff-no-rj",
     },
-    tags: ["Все", "Прикольные кошечки", "Веселые Собачки", "Юмористические видео", "Домашние Животные"],
-    views: 52338,
-    duration: 662,
-    whenPosted: "4 дня назад",
-    thumbnailUrl: "https://i.ytimg.com/vi/Ad5y91VMLs0/mqdefault.jpg",
+    tags: ["Все", "Домашние Животные","Веселые Собачки","Юмористические видео"],
+    views: 95940, 
+    duration: 683,
+    whenPosted: new Date('2021-04-18'),
+    thumbnailUrl: "https://i.ytimg.com/vi/vwSw184vKd0/mqdefault.jpg",
     videoUrl:
-      "https://www.youtube.com/embed/Ad5y91VMLs0?si=aWqrNz0lJnhCHvnV&autoplay=1",
+      "https://www.youtube.com/embed/vwSw184vKd0?si=C92zRU6bvk4tDvIH&autoplay=1",
   },
 ]

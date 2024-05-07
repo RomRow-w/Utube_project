@@ -1,29 +1,17 @@
 import { CirclePlay } from "lucide-react";
 import React from "react";
 import { formatDuration } from "../utils/formatDuration";
+import { formatTimeAgo } from "../utils/formatTimestamp";
+import { IvideoItem } from "../data/home"
 
-type VideoItemProps = {
-  id: string,
-  title: string,
-  channel: {
-    name: string,
-    url: string,
-    profileUrl: string,
-  }
-  tags: string[],
-  views: number,
-  duration: number,
-  whenPosted: string,
-  thumbnailUrl: string,
-  videoUrl: string,
-  setModalState: React.Dispatch<React.SetStateAction<string>>,
+interface IVideoProps extends IvideoItem {
+  setModalState: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const viewFormatter = new Intl.NumberFormat(undefined, {notation: "compact"});
 
 
 export default function VideoItem({
-  id,
   title,
   channel,
   views,
@@ -32,7 +20,7 @@ export default function VideoItem({
   thumbnailUrl,
   videoUrl,
   setModalState,
-}: VideoItemProps) {
+}: IVideoProps) {
 
   return (
     <div className="flex flex-col gap-2 justify-between">
@@ -60,8 +48,9 @@ export default function VideoItem({
         </div>
       </div>
       <div className="text-secondary-text text-sm"> 
-        {viewFormatter.format(views)} Просмотров ● {whenPosted}
+        {viewFormatter.format(views)} Просмотров ● {formatTimeAgo(new Date(whenPosted))}
       </div>
     </div>
   )
 }
+
