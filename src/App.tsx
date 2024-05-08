@@ -24,7 +24,7 @@ function App() {
         searchString={searchString}
         setSearchString={setSeacrhString}
       />
-      <div className="grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto">
+      <main className="grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto">
         {sidebarVisibility && <Sidebar />}
         <div className="px-8 overflow-x-hidden">
           <div className="sticky top-0 bg-white z-10 pb-4">
@@ -52,7 +52,7 @@ function App() {
             </div>
           )}
         </div>
-      </div>
+      </main>
       {modalUrl && (
         <ViewModal modalState={modalUrl} setModalState={setModalUrl} />
       )}

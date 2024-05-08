@@ -16,7 +16,7 @@ export default function MainHeader({sideVisible, setSideVisible, searchString, s
   const [showFullWidthSearch, setShowFullWidthSearch] = useState<boolean>(false);
 
   return (
-    <div className="flex justify-between gap-10 lg:gap-20 pt-2 mb-6 mx-4">
+    <header className="flex justify-between gap-10 lg:gap-20 pt-2 mb-6 mx-4">
       <div 
         className={
           `gap-4 items-center flex-shrink-0 
@@ -83,6 +83,6 @@ export default function MainHeader({sideVisible, setSideVisible, searchString, s
           <User />
         </Button>
       </div>
-    </div>
+    </header>
   )
 }
