@@ -30,7 +30,10 @@ export default function VideoItem({
           text-secondary text-sm px-0.5 rounded">
           {formatDuration(duration)}
         </div>
-        <div className="flex justify-center items-center absolute w-full h-full top-0 opacity-0 hover:opacity-80 bg-black rounded-xl">
+        <div className="
+          flex justify-center items-center absolute 
+          w-full h-full top-0 opacity-0 hover:opacity-80 bg-black rounded-xl
+        ">
           <CirclePlay className="text-[#8700FF] h-16 w-16"/>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import placeholderAlert from "../../utils/placeholderAlert";
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps } from "react";
 import { twMerge } from "tailwind-merge";

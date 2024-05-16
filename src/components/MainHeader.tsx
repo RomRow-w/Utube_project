@@ -12,7 +12,9 @@ type headerProps = {
 }
 
 
-export default function MainHeader({sideVisible, setSideVisible, searchString, setSearchString}: headerProps) {
+export default function MainHeader({
+    sideVisible, setSideVisible, searchString, setSearchString
+  }: headerProps) {
   const [showFullWidthSearch, setShowFullWidthSearch] = useState<boolean>(false);
 
   return (
@@ -21,8 +23,7 @@ export default function MainHeader({sideVisible, setSideVisible, searchString, s
         className={
           `gap-4 items-center flex-shrink-0 
           ${showFullWidthSearch ? "hidden" : "flex" }`
-        }
-      >
+      }>
         <Button variant="ghost" size="icon" onClick={() => setSideVisible(!sideVisible)}>
           <Menu />
         </Button>
@@ -62,12 +63,22 @@ export default function MainHeader({sideVisible, setSideVisible, searchString, s
             <Search />
           </Button>
         </div>
-        <Button type="button" size="icon" className="flex-shrink-0" onClick={() => placeholderAlert()}>
+        <Button 
+          type="button" 
+          size="icon" 
+          className="flex-shrink-0" 
+          onClick={() => placeholderAlert()}
+        >
           <Mic />
         </Button>
       </form>
       <div className={`flex-shrink-0 md:gap-2 ${showFullWidthSearch ? "hidden" : "flex" }`}>
-        <Button onClick={() => setShowFullWidthSearch(true)} size="icon" variant="ghost" className="md:hidden">
+        <Button 
+          onClick={() => setShowFullWidthSearch(true)} 
+          size="icon" 
+          variant="ghost" 
+          className="md:hidden"
+        >
           <Search />
         </Button>
         <Button size="icon" variant="ghost" className="md:hidden" onClick={() => placeholderAlert()}>
