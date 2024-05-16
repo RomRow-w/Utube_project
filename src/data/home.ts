@@ -30,20 +30,20 @@ export interface IvideoItem {
 export const videos = [ 
   {
       id: "1",
-      title: "🐕 Я тебя не боюсь! 😺 Смешное видео с собаками, кошками и котятами! 😸",
+      title: "Самые смешные животные/Приколы с котами и собаками",
       channel: {
-        name: "Top Pets",
-        url: "https://www.youtube.com/@TopPetsVideo",
+        name: "Pump Ace",
+        url: "https://www.youtube.com/@DaNiece32",
         profileUrl:
-          "https://yt3.googleusercontent.com/FEUaIm2YPzf_IrR7wTSG_4QpGoKi2GuymEytaa3QPU08q_5ozebXLmgznrTNJf12vSpxGnxmhg=s120-c-k-c0x00ffffff-no-rj",
+          "https://yt3.googleusercontent.com/k4x-pDP_Gsb-00ECcVWyfJDpeCW2HTi4nwd-VuABzIPDc1DB63fytrMKY27pALf6Y_kLs9TG4A=s120-c-k-c0x00ffffff-no-rj",
       },
       tags: ["Все", "Прикольные кошечки", "Веселые Собачки", "Юмористические видео", "Домашние Животные"],
-      views: 52338,
-      duration: 662,
-      whenPosted: new Date('2024-05-01'),
-      thumbnailUrl: "https://i.ytimg.com/vi/Ad5y91VMLs0/mqdefault.jpg",
+      views: 1207978,
+      duration: 3557, 
+      whenPosted: new Date('2023-11-29'),
+      thumbnailUrl: "https://i3.ytimg.com/vi/xgM4cps5oZ8/maxresdefault.jpg",
       videoUrl:
-        "https://www.youtube.com/embed/Ad5y91VMLs0?si=aWqrNz0lJnhCHvnV&autoplay=1",
+        "https://www.youtube.com/embed/xgM4cps5oZ8?si=X5VTJidA0LpbqM6g&autoplay=1",
     },
   {
     id: "2",
@@ -132,37 +132,37 @@ export const videos = [
   },
   {
     id: "7",
-    title: "РУССКИЕ ПРИКОЛЫ про АВТО 2024 лучшие до слез угар, ржач, 30 минут смеха с дорог #4",
+    title: "Авто приколы дураки и дороги подборка дтп №48",
     channel: {
-      name: "ЦАРЬ ПРИКОЛОВ",
-      url: "https://www.youtube.com/@TsarPrikolol",
+      name: "ДТП TV. Подборки аварий и ДТП.",
+      url: "https://www.youtube.com/@dtptv",
       profileUrl:
-        "https://yt3.googleusercontent.com/mRwfGe4KRMroTYteeiPaCfWJeMPFUsUmW6PWIxR3dHGqpEhQzL19_J8rnaZ58GA3gyxo99VLPis=s176-c-k-c0x00ffffff-no-rj",
+        "https://yt3.googleusercontent.com/GK3uNz124n9dO9kjQnxUTU983dxhaQjVBz38U7AtdKSeGGRPZg522e3gEECh82_6xknDPPUliA=s120-c-k-c0x00ffffff-no-rj",
     },
     tags: ["Все", "Спортивные автомобили","Юмористические видео"],
-    views: 49445,
-    duration: 1902,
-    whenPosted: new Date('2024-03-03'),
-    thumbnailUrl: "https://i.ytimg.com/vi/HtysPnQvS9o/mqdefault.jpg",
+    views: 2417,
+    duration: 603,
+    whenPosted: new Date('2023-02-15'),
+    thumbnailUrl: "https://i3.ytimg.com/vi/3_uQKE_r6IE/maxresdefault.jpg",
     videoUrl:
-      "https://www.youtube.com/embed/HtysPnQvS9o?si=lE9NSg0ar8n-9R9f&autoplay=1",
+      "https://www.youtube.com/embed/3_uQKE_r6IE?si=Mel-7P2M8r8IwOC7&autoplay=1",
   },
   {
     id: "8",
-    title: "Самые Удивительные Спорткары",
+    title: "Спорткары, истребитель, супербайк и болид; кто быстрее?",
     channel: {
-      name: "В поисках фактов",
-      url: "https://www.youtube.com/@v_poiskah_faktov",
+      name: "NTDRussian",
+      url: "https://www.youtube.com/@NTDRussian",
       profileUrl:
-        "https://yt3.googleusercontent.com/ytc/AIdro_nPB9hRg6EMXjHITnnWQ8UPVyGPHdI5BZM1BKId0YpW5g=s176-c-k-c0x00ffffff-no-rj",
+        "https://yt3.googleusercontent.com/ytc/AIdro_nF7J3A3Rf7PFsy7nyuEx8fST6yove1YR2XRpFV8Nq61A=s120-c-k-c0x00ffffff-no-rj",
     },
     tags: ["Все", "Спортивные автомобили"],
-    views: 116788,
-    duration: 696,
-    whenPosted: new Date('2018-09-01'),
-    thumbnailUrl: "https://i.ytimg.com/vi/2H54GAUyak8/mqdefault.jpg",
+    views: 722478,
+    duration: 87,
+    whenPosted: new Date('2018-09-21'),
+    thumbnailUrl: "https://i3.ytimg.com/vi/Y-jKJKqwQbg/maxresdefault.jpg",
     videoUrl:
-      "https://www.youtube.com/embed/2H54GAUyak8?si=nY1ExdV_mVdIG7rE&autoplay=1",
+      "https://www.youtube.com/embed/Y-jKJKqwQbg?si=tLQcj-hH_Jr_tvh9&autoplay=1",
   },
   {
     id: "9",
